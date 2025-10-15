@@ -387,7 +387,8 @@ body.loaded #preloader {
   letter-spacing: -1.3px;
   line-height: 1.2;
   text-transform: capitalize;
-  margin: 0 0 8px;
+  margin: 0 0 60px;
+  color: #fff;
 }
 .section-heading p {
   font-size: 14px;
@@ -705,14 +706,19 @@ ul.nav > li > a.active {
   }
 }
 
-
-
 /*==================== media query for mobile =======================*/
 @media (max-width: 767px) {
   .hero-section {
-    height: auto;
+    height: 400px !important;
     padding: 0;
     text-align: center;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+    margin: 0;
+    color: #fff;
+    padding-top: 20px;
   }
 
   .header-section {
@@ -727,7 +733,7 @@ ul.nav > li > a.active {
 
   .slicknav_menu {
     top: 50px;
-}
+  }
 
   .hero-section:before {
     right: 0px;
