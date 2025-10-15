@@ -266,7 +266,10 @@ footer {
   }
   /* Main content adjustments */
   .main {
-    padding: 20px;
+    padding: 0px;
+  }
+  .main-section {
+    padding: 20px !important;
   }
 }
 
