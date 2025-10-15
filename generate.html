@@ -1,65 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Assist - AI Powered</title>
-  <link rel="stylesheet" href="css/generate.css">
-</head>
-<body>
-  <div class="container">
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-      <div class="toggle-btn" id="toggleBtn">&lt;&lt;</div>
-      <h2>Upload Files</h2>
-      <div class="upload-box" id="uploadBox">
-        <p>Drag and Drop files to upload<br>or</p>
-        <input type="file" id="fileInput" multiple >
-        <p class="small-text">Supported files: PDF, DOCX, TXT</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Assist - AI Powered</title>
+    <link rel="stylesheet" href="css/generate.css" />
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+        <div class="toggle-btn" id="toggleBtn">&lt;&lt;</div>
+        <h2>Upload Files</h2>
+        <div class="upload-box" id="uploadBox">
+          <p>Drag and Drop files to upload<br />or</p>
+          <input type="file" id="fileInput" multiple />
+          <p class="small-text">Supported files: PDF, DOCX, TXT</p>
+        </div>
+
+        <h3>Uploaded files</h3>
+        <ul id="fileList"></ul>
       </div>
 
-      <h3>Uploaded files</h3>
-      <ul id="fileList"></ul>
-    </div>
+      <!-- Main Content -->
+      <div class="main">
+        <h1>Study Assist - AI Powered</h1>
+        <p class="subtitle">
+          Generate possible questions from your notebook.<br />Go to exam hall
+          more smarter, more confident!
+        </p>
 
-    <!-- Main Content -->
-    <div class="main">
-      <h1>Study Assist - AI Powered</h1>
-      <p class="subtitle">Generate possible questions from your notebook.<br>Go to exam hall more smarter, more confident!</p>
+        <div class="progress">
+          <label>Generating summary with AI... (80%)</label>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 80%"></div>
+          </div>
+        </div>
 
-      <div class="progress">
-        <label>Generating summary with AI... (80%)</label>
-        <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
+        <!-- Notebook Summary -->
+        <section class="card">
+          <h2>Notebook Summary</h2>
+          <p><strong>Title:</strong> Study Guide for Successful Learning</p>
+          <p>
+            This notebook serves as a comprehensive guide to enhance learning
+            effectiveness through various strategies. It emphasizes the
+            importance of understanding personal motivation, learning styles,
+            and the need for organization in study habits.
+          </p>
+        </section>
+
+        <!-- Ask a Question -->
+        <section class="card">
+          <h2>Ask a Question from your Book</h2>
+          <textarea
+            id="questionInput"
+            placeholder="Enter your question..."
+          ></textarea>
+          <button id="askBtn">Submit</button>
+          <p class="warning" id="questionWarning" style="display: none">
+            ⚠️ Please upload a notebook before asking a question.
+          </p>
+        </section>
+
+        <!-- Generate Quiz Questions -->
+        <section class="card">
+          <h2>Generate Quiz Questions</h2>
+          <label>Select the number of quiz questions:</label>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 40%"></div>
+          </div>
+          <button id="generateBtn" style="margin-top: 10px">
+            Generate Questions
+          </button>
+          <p class="warning" id="quizWarning" style="display: none">
+            ⚠️ Please upload a notebook before generating quiz questions.
+          </p>
+        </section>
+
+        <footer>© 2025 StudyAssist | All rights reserved</footer>
       </div>
-
-      <!-- Notebook Summary -->
-      <section class="card">
-        <h2>Notebook Summary</h2>
-        <p><strong>Title:</strong> Study Guide for Successful Learning</p>
-        <p>This notebook serves as a comprehensive guide to enhance learning effectiveness through various strategies. It emphasizes the importance of understanding personal motivation, learning styles, and the need for organization in study habits.</p>
-      </section>
-
-      <!-- Ask a Question -->
-      <section class="card">
-        <h2>Ask a Question from your Book</h2>
-        <textarea id="questionInput" placeholder="Enter your question..."></textarea>
-        <button id="askBtn">Submit</button>
-        <p class="warning" id="questionWarning" style="display:none;">⚠️ Please upload a notebook before asking a question.</p>
-      </section>
-
-      <!-- Generate Quiz Questions -->
-      <section class="card">
-        <h2>Generate Quiz Questions</h2>
-        <label>Select the number of quiz questions:</label>
-        <div class="progress-bar"><div class="progress-fill" style="width: 40%;"></div></div>
-        <button id="generateBtn" style="margin-top: 10px;">Generate Questions</button>
-        <p class="warning" id="quizWarning" style="display:none;">⚠️ Please upload a notebook before generating quiz questions.</p>
-      </section>
-
-      <footer>© 2025 StudyAssist | All rights reserved</footer>
     </div>
-  </div>
 
-  <script src="js/generate.js"></script>
-</body>
+    <script src="js/generate.js"></script>
+  </body>
 </html>

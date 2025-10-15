@@ -1101,6 +1101,9 @@ ul.nav > li > a.active {
 .testimonial-section {
   z-index: 1;
 }
+.WhatPeopleSay{
+  color: #1e4ea8;
+}
 .testimonial-item {
   background-color: #f4f9ff;
   padding: 30px;

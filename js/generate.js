@@ -40,5 +40,5 @@ askBtn.addEventListener('click', () => {
 // Collapse sidebar
 toggleBtn.addEventListener('click', () => {
   sidebar.classList.toggle('collapsed');
-  toggleBtn.textContent = sidebar.classList.contains('collapsed') ? '>>' : '<<';
+  toggleBtn.textContent = sidebar.classList.contains('collapsed') ? 'X' : 'X';
 });
