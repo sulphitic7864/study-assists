@@ -705,12 +705,20 @@ ul.nav > li > a.active {
   }
 }
 
-/* media query for mobile */
+
+
+/*==================== media query for mobile =======================*/
 @media (max-width: 767px) {
   .hero-section {
     height: auto;
     padding: 0;
     text-align: center;
+  }
+
+  .header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .hero-inner {
