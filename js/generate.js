@@ -6,6 +6,7 @@ const questionWarning = document.getElementById('questionWarning');
 const quizWarning = document.getElementById('quizWarning');
 const toggleBtn = document.getElementById('toggleBtn');
 const sidebar = document.getElementById('sidebar');
+const mobileToggle = document.getElementById('mobileToggle');
 
 let uploadedFiles = [];
 
@@ -16,10 +17,9 @@ fileInput.addEventListener('change', (e) => {
   renderFileList();
 });
 
-// Render uploaded files
 function renderFileList() {
   fileList.innerHTML = '';
-  uploadedFiles.forEach(file => {
+  uploadedFiles.forEach((file) => {
     const li = document.createElement('li');
     li.textContent = file.name;
     fileList.appendChild(li);
@@ -36,9 +36,27 @@ askBtn.addEventListener('click', () => {
   }
 });
 
-
-// Collapse sidebar
+// Toggle Sidebar (desktop)
 toggleBtn.addEventListener('click', () => {
   sidebar.classList.toggle('collapsed');
-  toggleBtn.textContent = sidebar.classList.contains('collapsed') ? 'X' : 'X';
+  const icon = toggleBtn.querySelector('i');
+  icon.classList.toggle('fa-bars');
+  icon.classList.toggle('fa-bars');
+});
+
+
+// Mobile Sidebar Toggle with outside click close
+mobileToggle.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+});
+
+// Close sidebar when clicking outside
+document.addEventListener('click', (e) => {
+  if (
+    sidebar.classList.contains('open') &&
+    !sidebar.contains(e.target) &&
+    !mobileToggle.contains(e.target)
+  ) {
+    sidebar.classList.remove('open');
+  }
 });

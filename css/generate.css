@@ -8,6 +8,7 @@ body {
 .container {
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
 /* Sidebar */
@@ -15,14 +16,64 @@ body {
   width: 280px;
   background: #1e4ea8;
   padding: 20px;
-  transition: width 0.3s;
+  transition: all 0.3s ease;
   position: relative;
 }
 
-.sidebar.collapsed {
-  width: 60px;
+.brand {
+  font-size: 25px;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -1px;
+  font-weight: 600;
+  margin-left: 13px;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -1px;
+  font-weight: 600;
+  margin-left: 13px;
+}
+.brand-icon {
+  flex: 0 0 36px;
+}
+.brand-text {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar-content {
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-content {
+  display: none;
+}
+
+/* Upload icon when collapsed */
+.upload-icon-collapsed {
+  display: none;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 30px;
+}
+
+.sidebar.collapsed .upload-icon-collapsed {
+  display: block;
+}
+
+/* Toggle button */
 .toggle-btn {
   position: absolute;
   top: 10px;
@@ -30,17 +81,28 @@ body {
   background: #1e4ea8;
   color: white;
   border-radius: 0 5px 5px 0;
-  padding: 5px 10px;
+  padding: 8px 10px;
   cursor: pointer;
-  font-weight: bold;
+  font-size: 18px;
+  transition: background 0.3s;
+  z-index: 1001;
 }
 
+.toggle-btn:hover {
+  background: #15408a;
+}
+
+/* Upload box */
 .upload-box {
   background: #2c65d1;
   border: 2px dashed #fff;
   padding: 15px;
   border-radius: 10px;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.progress{
   margin-bottom: 20px;
 }
 
@@ -68,50 +130,34 @@ ul li {
   word-break: break-all;
 }
 
-/* Main Content */
+/* Main content */
 .main {
   flex: 1;
   background: #fff;
   color: #333;
   padding: 30px;
   overflow-y: auto;
+  position: relative;
 }
 
-.main h1 {
+/* Mobile Header */
+.mobile-header {
+  display: none;
+}
+
+.mobile-toggle {
+  font-size: 22px;
   color: #1e4ea8;
-  margin-bottom: 5px;
+  cursor: pointer;
 }
 
-.subtitle {
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.progress {
-  margin: 10px 0 30px;
-}
-
-.progress-bar {
-  width: 100%;
-  background: #dce3f7;
-  border-radius: 20px;
-  overflow: hidden;
-  height: 10px;
-  margin-top: 5px;
-}
-
-.progress-fill {
-  height: 100%;
-  background: #1e4ea8;
-  transition: width 0.3s;
-}
-
+/* Cards, buttons, etc. */
 .card {
   background: #eaf0ff;
   border-radius: 15px;
   padding: 20px;
   margin-bottom: 25px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card h2 {
@@ -153,3 +199,74 @@ footer {
   color: #666;
   font-size: 14px;
 }
+
+/* ------------------ Responsive ------------------ */
+@media (max-width: 667px) {
+  /* Sidebar overlay full screen */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -110%;
+    width: 90%;
+    height: 100%;
+    background: #1e4ea8;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 80px;
+    overflow-y: scroll;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+      .sidebar-content {
+        width: 90%;
+        display: contents;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+  /* Hide the desktop toggle */
+  .toggle-btn {
+    display: none;
+  }
+
+  /* Mobile header (acts as top navbar) */
+.mobile-header {
+    display: flex;
+    justify-content: space-between; /* Pushes content to the edges */
+    align-items: center;
+    background: #1e4ea8;
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+}
+
+  .mobile-toggle {
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Optional overlay blur effect */
+  .sidebar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+    z-index: -1;
+  }
+  /* Main content adjustments */
+  .main {
+    padding: 20px;
+  }
+}
+

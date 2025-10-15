@@ -5,28 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Study Assist - AI Powered</title>
     <link rel="stylesheet" href="css/generate.css" />
-    <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="css/font-awesome.min.css" />
   </head>
   <body>
     <div class="container">
       <!-- Sidebar -->
       <div class="sidebar" id="sidebar">
-        <div class="toggle-btn" id="toggleBtn">&lt;&lt;</div>
-        <h2>Upload Files</h2>
-        <div class="upload-box" id="uploadBox">
-          <p>Drag and Drop files to upload<br />or</p>
-          <input type="file" id="fileInput" multiple />
-          <p class="small-text">Supported files: PDF, DOCX, TXT</p>
+        <div class="toggle-btn" id="toggleBtn">
+          <i class="fa fa-bars"></i>
         </div>
 
-        <h3>Uploaded files</h3>
-        <ul id="fileList"></ul>
+        <div class="sidebar-content">
+          <h2>Upload Files</h2>
+          <div class="upload-box" id="uploadBox">
+            <p>Drag and Drop files to upload<br />or</p>
+            <input type="file" id="fileInput" multiple />
+            <p class="small-text">Supported files: PDF, DOCX, TXT</p>
+          </div>
+
+          <h3>Uploaded files</h3>
+          <ul id="fileList"></ul>
+        </div>
+
+        <div class="upload-icon-collapsed">
+          <i class="fa fa-upload"></i>
+        </div>
       </div>
 
       <!-- Main Content -->
       <div class="main">
-        <h1>Study Assist - AI Powered</h1>
+        <div class="mobile-header">
+          <div class="logo-text">
+            <a class="brand" href="#" aria-label="Study Assist home">
+              <svg
+                class="brand-icon"
+                width="36"
+                height="36"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path fill="#22c1ff" d="M2 7l10-5 10 5v2l-10 5L2 9z"></path>
+                <path
+                  fill="#0ea5a4"
+                  d="M2 12l10-5 10 5v2l-10 5L2 14z"
+                  opacity="0.15"
+                ></path>
+              </svg>
+              <span class="brand-text">StudyAssists</span>
+            </a>
+          </div>
+
+          <div class="mobile-toggle" id="mobileToggle">
+            <i class="fa fa-bars"></i>
+          </div>
+        </div>
+
+        <h1 class="desktop-only">Study Assist - AI Powered</h1>
         <p class="subtitle">
           Generate possible questions from your notebook.<br />Go to exam hall
           more smarter, more confident!
@@ -39,7 +73,6 @@
           </div>
         </div>
 
-        <!-- Notebook Summary -->
         <section class="card">
           <h2>Notebook Summary</h2>
           <p><strong>Title:</strong> Study Guide for Successful Learning</p>
@@ -51,7 +84,6 @@
           </p>
         </section>
 
-        <!-- Ask a Question -->
         <section class="card">
           <h2>Ask a Question from your Book</h2>
           <textarea
@@ -64,7 +96,6 @@
           </p>
         </section>
 
-        <!-- Generate Quiz Questions -->
         <section class="card">
           <h2>Generate Quiz Questions</h2>
           <label>Select the number of quiz questions:</label>
