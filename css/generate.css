@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4ff;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background: #1e4ea8;
+  padding: 20px;
+  transition: width 0.3s;
+  position: relative;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: -20px;
+  background: #1e4ea8;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.upload-box {
+  background: #2c65d1;
+  border: 2px dashed #fff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.upload-box input {
+  display: block;
+  margin: 10px auto;
+}
+
+.small-text {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  background: #2c65d1;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  word-break: break-all;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  background: #fff;
+  color: #333;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.main h1 {
+  color: #1e4ea8;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.progress {
+  margin: 10px 0 30px;
+}
+
+.progress-bar {
+  width: 100%;
+  background: #dce3f7;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 10px;
+  margin-top: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #1e4ea8;
+  transition: width 0.3s;
+}
+
+.card {
+  background: #eaf0ff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  color: #1e4ea8;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  font-family: inherit;
+}
+
+button {
+  background: #1e4ea8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #15408a;
+}
+
+.warning {
+  color: #d9534f;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+  font-size: 14px;
+}
