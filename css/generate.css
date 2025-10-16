@@ -406,3 +406,44 @@ footer {
   }
 }
 
+.sidebar-nav-bottom {
+  position: absolute;
+  bottom: 20px; /* Space from the bottom edge */
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar-nav-bottom .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 0;
+  transition: background 0.3s;
+}
+
+.sidebar-nav-bottom .nav-link:hover {
+  background: #15408a;
+  border-radius: 8px;
+}
+
+/* --- Hide text when collapsed --- */
+.sidebar.collapsed .sidebar-nav-bottom .nav-link {
+  justify-content: center;
+}
+
+.sidebar.collapsed .sidebar-nav-bottom .nav-link i {
+  font-size: 20px;
+}
+
+.sidebar.collapsed .sidebar-nav-bottom .nav-link::after {
+  content: ""; /* No label when collapsed */
+}
+
+.sidebar.collapsed .sidebar-nav-bottom .nav-link span {
+  display: none;
+}

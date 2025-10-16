@@ -15,20 +15,25 @@
           <i class="fa fa-times"></i>
         </div>
 
-        <div class="sidebar-content">
-          <h2>Upload Files</h2>
-          <div class="upload-box" id="uploadBox">
-            <p>Drag and Drop files to upload<br />or</p>
-            <input type="file" id="fileInput" multiple />
-            <p class="small-text">Supported files: PDF, DOCX, TXT</p>
+        <div class="sidebar-main-content">
+          <div class="sidebar-content">
+            <h2>Upload Files</h2>
+            <div class="upload-box" id="uploadBox">
+              <p>Drag and Drop files to upload<br />or</p>
+              <input type="file" id="fileInput" multiple />
+              <p class="small-text">Supported files: PDF, DOCX, TXT</p>
+            </div>
+
+            <h3>Uploaded files</h3>
+            <ul id="fileList"></ul>
           </div>
-
-          <h3>Uploaded files</h3>
-          <ul id="fileList"></ul>
         </div>
-
         <div class="upload-icon-collapsed">
           <i class="fa fa-upload"></i>
+        </div>
+
+        <div class="sidebar-nav-bottom">
+          <a href="/" class="nav-link"> <i class="fa fa-home"></i> <span>Home</span> </a>
         </div>
       </div>
 
@@ -61,72 +66,85 @@
         </div>
 
         <div class="main-section">
-        <h1 class="desktop-only">Study Assist - AI Powered</h1>
-        <p class="subtitle">
-          Generate possible questions from your notebook.<br />Go to exam hall
-          more smarter, more confident!
-        </p>
+          <h1 class="desktop-only">Study Assist - AI Powered</h1>
+          <p class="subtitle">
+            Generate possible questions from your notebook.<br />Go to exam hall
+            more smarter, more confident!
+          </p>
 
-        <!-- <div class="progress">
+          <!-- <div class="progress">
           <label>Generating summary with AI... (80%)</label>
           <div class="progress-bar">
             <div class="progress-fill" style="width: 80%"></div>
           </div>
         </div> -->
 
-        <div class="progress">
+          <div class="progress">
             <div class="progress-bar">
               <div class="progress-fill"></div>
             </div>
-            <label>Generating summary with AI... <span id="filling">(80%)</span></label>
+            <label
+              >Generating summary with AI...
+              <span id="filling">(80%)</span></label
+            >
           </div>
 
-        <section class="card">
-          <h2>Notebook Summary</h2>
-          <p><strong>Title:</strong> Study Guide for Successful Learning</p>
-          <p>
-            This notebook serves as a comprehensive guide to enhance learning
-            effectiveness through various strategies. It emphasizes the
-            importance of understanding personal motivation, learning styles,
-            and the need for organization in study habits.
-          </p>
-        </section>
+          <section class="card">
+            <h2>Notebook Summary</h2>
+            <p><strong>Title:</strong> Study Guide for Successful Learning</p>
+            <p>
+              This notebook serves as a comprehensive guide to enhance learning
+              effectiveness through various strategies. It emphasizes the
+              importance of understanding personal motivation, learning styles,
+              and the need for organization in study habits.
+            </p>
+          </section>
 
-        <section class="card">
-          <h2>Ask a Question from your Book</h2>
-          <textarea
-            id="questionInput"
-            placeholder="Enter your question..."
-          ></textarea>
-          <button id="askBtn">Submit</button>
-          <p class="warning" id="questionWarning" style="display: none">
-            ⚠️ Please upload a notebook before asking a question.
-          </p>
-        </section>
+          <section class="card">
+            <h2>Ask a Question from your Book</h2>
+            <textarea
+              id="questionInput"
+              placeholder="Enter your question..."
+            ></textarea>
+            <button id="askBtn">Submit</button>
+            <p class="warning" id="questionWarning" style="display: none">
+              ⚠️ Please upload a notebook before asking a question.
+            </p>
+          </section>
 
-        <section class="card">
-          <h2>Generate Quiz Questions</h2>
-          <label>Select the number of quiz questions:</label>
-          <div class="range-wrapper">
-        <span id="quizValue">14</span>
-        
-        <div class="range-container">
-            <input type="range" id="quizRange" min="1" max="50" value="14">
-            
-            <div class="range-labels">
-                <span>1</span>
-                <span>50</span>
+          <section class="card">
+            <h2>Generate Quiz Questions</h2>
+            <label>Select the number of quiz questions:</label>
+            <div class="range-wrapper">
+              <span id="quizValue">14</span>
+
+              <div class="range-container">
+                <input
+                  type="range"
+                  id="quizRange"
+                  min="1"
+                  max="50"
+                  value="14"
+                />
+
+                <div class="range-labels">
+                  <span>1</span>
+                  <span>50</span>
+                </div>
+              </div>
             </div>
+            <button
+              id="generateBtn"
+              style="margin-top: 10px"
+              class="btn btn-primary"
+            >
+              Generate Questions
+            </button>
+            <p class="warning" id="quizWarning" style="display: none">
+              ⚠️ Please upload a notebook before generating quiz questions.
+            </p>
+          </section>
         </div>
-    </div>
-          <button id="generateBtn" style="margin-top: 10px" class="btn btn-primary">
-            Generate Questions
-          </button>
-          <p class="warning" id="quizWarning" style="display: none">
-            ⚠️ Please upload a notebook before generating quiz questions.
-          </p>
-        </section>
-</div>
         <footer>© 2025 StudyAssist | All rights reserved</footer>
       </div>
     </div>
