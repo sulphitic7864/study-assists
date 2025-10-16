@@ -103,104 +103,108 @@ body {
   margin-bottom: 20px;
 }
 
-.progress{
+.progress {
   margin-bottom: 20px;
 }
 
 .progress-bar {
-    width: 100%;
-    background: #dce3f7;
-    border-radius: 20px;
-    overflow: hidden !;
-    height: 10px;
-    margin: 5px 0px;
+  width: 100%;
+  background: #dce3f7;
+  border-radius: 20px;
+  overflow: hidden !;
+  height: 10px;
+  margin: 5px 0px;
 }
 
 .progress-fill {
-    height: 100%;
-    width: 80%;
-    background: #ff7a00;
-    transition: width 0.3s;
+  height: 100%;
+  width: 80%;
+  background: #ff7a00;
+  transition: width 0.3s;
 }
 
 /* Styling for the Range Input Container and Wrapper */
 .range-wrapper {
-    position: relative;
-    padding-top: 25px; /* Space for the floating value */
-    margin-bottom: 5px;
+  position: relative;
+  padding-top: 25px; /* Space for the floating value */
+  margin-bottom: 5px;
 }
 
 .range-container {
-    position: relative;
-    padding: 0;
-    height: 30px; /* Space for the track and the min/max labels below */
+  position: relative;
+  padding: 0;
+  height: 30px; /* Space for the track and the min/max labels below */
 }
 
 /* Current Value Display (The '14' shown above the thumb) */
 span#quizValue {
-    position: absolute;
-    top: 0; 
-    color: #fff;
-    font-size: 14px;
-    transform: translateX(-50%); /* Crucial for centering the text on the thumb */
-    /* JavaScript will handle the 'left' property */
+  position: absolute;
+  top: 0;
+  color: #fff;
+  font-size: 14px;
+  transform: translateX(-50%); /* Crucial for centering the text on the thumb */
+  /* JavaScript will handle the 'left' property */
 }
 
 /* Style the Range Input Track and Thumb */
 #quizRange {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 6px;
-    background: #ccc; 
-    border-radius: 5px;
-    outline: none;
-    position: absolute;
-    top: 0; 
-    left: 0;
-    margin: 0;
-    z-index: 2;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #ccc;
+  border-radius: 5px;
+  outline: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 2;
 }
 
 /* Style the track to show progress color */
 #quizRange::-webkit-slider-runnable-track {
-    -webkit-appearance: none;
-    height: 6px;
-    background: linear-gradient(to right, #ff7a00 var(--range-progress), #e0e0e0 var(--range-progress));
-    border-radius: 5px;
+  -webkit-appearance: none;
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    #ff7a00 var(--range-progress),
+    #e0e0e0 var(--range-progress)
+  );
+  border-radius: 5px;
 }
 
 /* Style the Thumb (the red circle/dot) */
 #quizRange::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    margin-top: -5px;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: #ff7a00;
-    cursor: grab;
-    border: none;
-    z-index: 3;
-    position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -5px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #ff7a00;
+  cursor: grab;
+  border: none;
+  z-index: 3;
+  position: relative;
 }
 
 /* Min/Max Labels at the bottom */
 .range-labels {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    position: absolute;
-    bottom: 0; /* Position below the track */
-    left: 0;
-    color: #fff; /* Use a subtle color */
-    font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: 0; /* Position below the track */
+  left: 0;
+  color: #fff; /* Use a subtle color */
+  font-size: 14px;
 }
 
 .range-labels span:last-child {
-    margin-right: -10px; /* Adjust right edge position if needed */
+  margin-right: -10px; /* Adjust right edge position if needed */
 }
 .range-labels span:first-child {
-    margin-left: -5px; /* Adjust left edge position if needed */
+  margin-left: -5px; /* Adjust left edge position if needed */
 }
 
 .upload-box input {
@@ -221,38 +225,38 @@ ul {
 
 /* Update the existing ul li styles */
 ul li {
-    background: #2c65d1;
-    margin: 5px 0;
-    padding: 8px;
-    border-radius: 5px;
-    word-break: break-all;
-    
-    /* New: Use Flexbox to align name and delete icon */
-    display: flex; 
-    justify-content: space-between; /* Push icon to the right */
-    align-items: center;
+  background: #2c65d1;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  word-break: break-all;
+
+  /* New: Use Flexbox to align name and delete icon */
+  display: flex;
+  justify-content: space-between; /* Push icon to the right */
+  align-items: center;
 }
 
 /* Style for the Delete Icon */
 .delete-file-btn {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 14px;
-    padding: 5px;
-    opacity: 0.8;
-    transition: opacity 0.2s;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
 }
 
 .delete-file-btn:hover {
-    color: #d9534f;
-    opacity: 1;
+  color: #d9534f;
+  opacity: 1;
 }
 
 /* Ensure the file name uses available space */
 .file-name {
-    flex-grow: 1; 
+  flex-grow: 1;
 }
 
 /* Main content */
@@ -302,7 +306,7 @@ textarea {
   text-align: left;
 }
 
-textarea::placeholder{
+textarea::placeholder {
   text-align: left;
 }
 
@@ -357,12 +361,12 @@ footer {
     left: 0;
   }
 
-      .sidebar-content {
-        width: 90%;
-        display: contents;
-        justify-content: center;
-        flex-direction: column;
-    }
+  .sidebar-content {
+    width: 90%;
+    display: contents;
+    justify-content: center;
+    flex-direction: column;
+  }
 
   /* Hide the desktop toggle */
   .toggle-btn {
@@ -370,7 +374,7 @@ footer {
   }
 
   /* Mobile header (acts as top navbar) */
-.mobile-header {
+  .mobile-header {
     display: flex;
     justify-content: space-between; /* Pushes content to the edges */
     align-items: center;
@@ -380,7 +384,7 @@ footer {
     position: sticky;
     top: 0;
     z-index: 1001;
-}
+  }
 
   .mobile-toggle {
     font-size: 22px;
@@ -416,6 +420,7 @@ footer {
 
 .sidebar-nav-bottom .nav-link {
   display: flex;
+  background: #15408a;
   align-items: center;
   justify-content: center;
   gap: 8px;
@@ -428,7 +433,8 @@ footer {
 
 .sidebar-nav-bottom .nav-link:hover {
   background: #15408a;
-  border-radius: 8px;
+  border: 1px solid #fff;
+  transition: all 0.3s;
 }
 
 /* --- Hide text when collapsed --- */
@@ -446,4 +452,71 @@ footer {
 
 .sidebar.collapsed .sidebar-nav-bottom .nav-link span {
   display: none;
+}
+
+
+
+
+
+
+
+/* Update the existing Upload box to control padding/margins */
+.upload-box {
+    background: #2c65d1;
+    border: 2px dashed #fff; /* Dashed white border */
+    padding: 20px 10px; /* Increased top/bottom padding for space */
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* 1. Style the Upload Icon */
+.upload-box .upload-icon {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 1px;
+}
+
+/* 2. Style the Drag and Drop Text */
+.upload-box .drag-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* 3. Hide the Native File Input */
+.custom-file-input-wrapper input[type="file"] {
+    /* Completely hide the default input element */
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+/* 4. Style the Custom "Browse" Button (The label triggers the hidden input) */
+.custom-upload-button {
+    background-color: #fff; /* White background for the button */
+    color: #1e4ea8; /* Dark blue text */
+    padding: 8px 25px;
+    border-radius: 20px; /* Rounded corners */
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+    /* Center the button */
+    margin: 0 auto 10px auto; 
+}
+
+.custom-upload-button:hover {
+    background-color: #eee;
+}
+
+/* Optional: Ensure small-text is centered */
+.small-text {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-top: 10px; /* Add space below the button */
 }
