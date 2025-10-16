@@ -16,7 +16,7 @@ body {
 .sidebar {
   width: 250px;
   background: #1e4ea8;
-  padding: 20px;
+  padding: 5px 20px;
   transition: all 0.3s ease;
   position: relative;
 }
