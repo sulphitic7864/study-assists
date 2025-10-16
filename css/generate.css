@@ -1,8 +1,9 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #f0f4ff;
   color: #fff;
+  background-color: #1e4ea8;
 }
 
 .container {
@@ -13,7 +14,7 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: 280px;
+  width: 250px;
   background: #1e4ea8;
   padding: 20px;
   transition: all 0.3s ease;
@@ -50,7 +51,7 @@ body {
 }
 
 .sidebar.collapsed {
-  width: 80px;
+  width: 50px;
 }
 
 .sidebar-content {
@@ -77,7 +78,7 @@ body {
 .toggle-btn {
   position: absolute;
   top: 10px;
-  right: -20px;
+  right: 0px;
   background: #1e4ea8;
   color: white;
   border-radius: 0 5px 5px 0;
@@ -134,7 +135,7 @@ ul li {
 .main {
   flex: 1;
   background: #fff;
-  color: #333;
+  color: #2c65d1;
   padding: 30px;
   overflow-y: auto;
   position: relative;
@@ -153,29 +154,36 @@ ul li {
 
 /* Cards, buttons, etc. */
 .card {
-  background: #eaf0ff;
+  background: #1e4ea8;
+  /* background: #eaf0ff; */
   border-radius: 15px;
+  color: #eaf0ff;
   padding: 20px;
   margin-bottom: 25px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card h2 {
-  color: #1e4ea8;
+  color: #eaf0ff;
 }
 
 textarea {
-  width: 100%;
+  width: 97%;
   height: 80px;
   border-radius: 10px;
   border: 1px solid #ccc;
   padding: 10px;
   margin: 10px 0;
   font-family: inherit;
+  text-align: left;
+}
+
+textarea::placeholder{
+  text-align: left;
 }
 
 button {
-  background: #1e4ea8;
+  background-color: #ff7a00;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -185,6 +193,7 @@ button {
 
 button:hover {
   background: #15408a;
+  transition: background 0.5s;
 }
 
 .warning {

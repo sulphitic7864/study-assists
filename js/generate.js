@@ -40,7 +40,7 @@ askBtn.addEventListener('click', () => {
 toggleBtn.addEventListener('click', () => {
   sidebar.classList.toggle('collapsed');
   const icon = toggleBtn.querySelector('i');
-  icon.classList.toggle('fa-bars');
+  icon.classList.toggle('fa-times');
   icon.classList.toggle('fa-bars');
 });
 
