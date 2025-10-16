@@ -337,6 +337,111 @@ footer {
   font-size: 14px;
 }
 
+
+.sidebar-nav-bottom {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar-nav-bottom .nav-link {
+  display: flex;
+  background: #15408a;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 20px;
+  transition: background 0.3s;
+}
+
+.sidebar-nav-bottom .nav-link:hover {
+  background: #2c65d1;
+  transition: all 0.3s;
+}
+
+/* --- Hide text when collapsed --- */
+.sidebar.collapsed .sidebar-nav-bottom .nav-link {
+  justify-content: center;
+}
+
+.sidebar.collapsed .sidebar-nav-bottom .nav-link i {
+  font-size: 20px;
+}
+
+.sidebar.collapsed .sidebar-nav-bottom .nav-link::after {
+  content: ""; /* No label when collapsed */
+}
+
+.sidebar.collapsed .sidebar-nav-bottom .nav-link span {
+  display: none;
+}
+
+/* Update the existing Upload box to control padding/margins */
+.upload-box {
+    background: #2c65d1;
+    border: 2px dashed #fff; /* Dashed white border */
+    padding: 20px 10px; /* Increased top/bottom padding for space */
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* 1. Style the Upload Icon */
+.upload-box .upload-icon {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 1px;
+}
+
+/* 2. Style the Drag and Drop Text */
+.upload-box .drag-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* 3. Hide the Native File Input */
+.custom-file-input-wrapper input[type="file"] {
+    /* Completely hide the default input element */
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+/* 4. Style the Custom "Browse" Button (The label triggers the hidden input) */
+.custom-upload-button {
+    background-color: #fff; /* White background for the button */
+    color: #1e4ea8; /* Dark blue text */
+    padding: 8px 25px;
+    border-radius: 20px; /* Rounded corners */
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+    /* Center the button */
+    margin: 0 auto 10px auto; 
+}
+
+.custom-upload-button:hover {
+    background-color: #eee;
+}
+
+/* Optional: Ensure small-text is centered */
+.small-text {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-top: 10px; /* Add space below the button */
+}
+
 /* ------------------ Responsive ------------------ */
 @media (max-width: 667px) {
   /* Sidebar overlay full screen */
@@ -408,114 +513,10 @@ footer {
   .main-section {
     padding: 20px !important;
   }
+
+  .sidebar-nav-bottom {
+  bottom: 50px;
+  text-align: center;
+}
 }
 
-.sidebar-nav-bottom {
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-  width: 100%;
-  text-align: left;
-}
-
-.sidebar-nav-bottom .nav-link {
-  display: flex;
-  background: #15408a;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 5px;
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  padding: 5px 20px;
-  transition: background 0.3s;
-}
-
-.sidebar-nav-bottom .nav-link:hover {
-  background: #2c65d1;
-  transition: all 0.3s;
-}
-
-/* --- Hide text when collapsed --- */
-.sidebar.collapsed .sidebar-nav-bottom .nav-link {
-  justify-content: center;
-}
-
-.sidebar.collapsed .sidebar-nav-bottom .nav-link i {
-  font-size: 20px;
-}
-
-.sidebar.collapsed .sidebar-nav-bottom .nav-link::after {
-  content: ""; /* No label when collapsed */
-}
-
-.sidebar.collapsed .sidebar-nav-bottom .nav-link span {
-  display: none;
-}
-
-
-
-
-
-
-
-/* Update the existing Upload box to control padding/margins */
-.upload-box {
-    background: #2c65d1;
-    border: 2px dashed #fff; /* Dashed white border */
-    padding: 20px 10px; /* Increased top/bottom padding for space */
-    border-radius: 10px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-/* 1. Style the Upload Icon */
-.upload-box .upload-icon {
-    font-size: 30px;
-    color: white;
-    margin-bottom: 1px;
-}
-
-/* 2. Style the Drag and Drop Text */
-.upload-box .drag-text {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-/* 3. Hide the Native File Input */
-.custom-file-input-wrapper input[type="file"] {
-    /* Completely hide the default input element */
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-}
-
-/* 4. Style the Custom "Browse" Button (The label triggers the hidden input) */
-.custom-upload-button {
-    background-color: #fff; /* White background for the button */
-    color: #1e4ea8; /* Dark blue text */
-    padding: 8px 25px;
-    border-radius: 20px; /* Rounded corners */
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    display: inline-block;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.2s;
-    /* Center the button */
-    margin: 0 auto 10px auto; 
-}
-
-.custom-upload-button:hover {
-    background-color: #eee;
-}
-
-/* Optional: Ensure small-text is centered */
-.small-text {
-    font-size: 12px;
-    opacity: 0.8;
-    margin-top: 10px; /* Add space below the button */
-}
