@@ -63,11 +63,11 @@ function attachDeleteListeners() {
     const deleteButtons = document.querySelectorAll('.delete-file-btn');
     deleteButtons.forEach(button => {
         button.addEventListener('click', (e) => {
-            // Find the parent <li> element
+            e.stopPropagation();
+
             const listItem = e.target.closest('li');
             if (listItem) {
-                // Get the index from the data attribute
-                const index = parseInt(listItem.dataset.index);
+                let index = parseInt(listItem.dataset.index);
                 deleteFile(index);
             }
         });
