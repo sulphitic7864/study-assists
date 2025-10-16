@@ -412,28 +412,27 @@ footer {
 
 .sidebar-nav-bottom {
   position: absolute;
-  bottom: 20px; /* Space from the bottom edge */
+  bottom: 2px;
   left: 0;
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 .sidebar-nav-bottom .nav-link {
   display: flex;
   background: #15408a;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
+  justify-content: flex-start;
+  gap: 5px;
   color: white;
   text-decoration: none;
   font-size: 16px;
-  padding: 10px 0;
+  padding: 5px 20px;
   transition: background 0.3s;
 }
 
 .sidebar-nav-bottom .nav-link:hover {
-  background: #15408a;
-  border: 1px solid #fff;
+  background: #2c65d1;
   transition: all 0.3s;
 }
 
