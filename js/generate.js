@@ -94,10 +94,17 @@ toggleBtn.addEventListener('click', () => {
   icon.classList.toggle('fa-bars');
 });
 
-
 // Mobile Sidebar Toggle with outside click close
 mobileToggle.addEventListener('click', () => {
-  sidebar.classList.toggle('open');
+  // Toggle the 'open' class on the sidebar
+  sidebar.classList.toggle('open'); 
+
+  // Get the icon element inside the mobileToggle
+  const icon = mobileToggle.querySelector('i'); 
+
+  // Toggle the icon classes
+  icon.classList.toggle('fa-times');
+  icon.classList.toggle('fa-bars');
 });
 
 // Close sidebar when clicking outside
