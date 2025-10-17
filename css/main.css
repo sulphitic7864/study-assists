@@ -647,10 +647,10 @@ ul.nav > li > a.active {
   content: "";
   position: absolute;
   width: 400px;
-  height: 650px;
+  height: 600px;
   vertical-align: middle;
   bottom: -280px;
-  right: 50px;
+  right: 20px;
   overflow: hidden;
   animation-name: mock-animation;
   animation-duration: 2s;

@@ -320,8 +320,8 @@ button {
 }
 
 button:hover {
-  background: #15408a;
-  transition: background 0.5s;
+  color: #15408a;
+  transition: all 0.5s;
 }
 
 .warning {
