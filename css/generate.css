@@ -58,6 +58,10 @@ body {
   transition: opacity 0.3s ease;
 }
 
+.sidebar-content h2{
+  margin-top: 10px;
+}
+
 .sidebar.collapsed .sidebar-content {
   display: none;
 }
