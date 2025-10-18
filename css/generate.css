@@ -273,6 +273,9 @@ ul li {
   position: relative;
 }
 
+.desktop-only {
+  margin-top: -20px;
+}
 /* Mobile Header */
 .mobile-header {
   display: none;
@@ -329,7 +332,7 @@ button:hover {
 }
 
 .warning {
-  color: #d9534f;
+  color: #ff7a00;
   font-weight: 500;
   margin-top: 10px;
 }

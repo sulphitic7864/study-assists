@@ -72,6 +72,16 @@ askBtn.addEventListener('click', () => {
   }
 });
 
+// Ask question validation
+generateBtn.addEventListener('click', () => {
+  if (uploadedFiles.length === 0) {
+    quizWarning.style.display = 'block';
+  } else {
+    quizWarning.style.display = 'none';
+    alert('Your question has been submitted!');
+  }
+});
+
 // Desktop sidebar toggle
 toggleBtn.addEventListener('click', () => {
   sidebar.classList.toggle('collapsed');
